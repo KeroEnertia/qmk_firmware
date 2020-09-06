@@ -69,19 +69,19 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 /* Lower
  * ,-----------------------------------------------------------------------------------.
- * |   `  |  F1  |  F2  |  F3  |  F4  |  F15 |   /  |   7  |   8  |   9  |   -  |  Del |
+ * |   `  |  F1  |  F2  |  F3  |  F4  |  F16 |   /  |   7  |   8  |   9  |   -  |  Del |
  * |------+------+------+------+------+-------------+------+------+------+------+------|
- * |  Del |  F5  |  F6  |  F7  |  F8  |  F14 |   *  |   4  |   5  |   6  |   +  |   \  |
+ * |  Del |  F5  |  F6  |  F7  |  F8  |  F15 |   *  |   4  |   5  |   6  |   +  |   \  |
  * |------+------+------+------+------+------|------+------+------+------+------+------|
- * |      |  F9  |  F10 |  F11 |  F12 |  F13 |  F16 |   1  |   2  |   3  | NEnt |Return|
+ * |      |  F9  |  F10 |  F11 |  F12 |  F13 |  F14 |   1  |   2  |   3  | NEnt |Return|
  * |------+------+------+------+------+------+------+------+------+------+------+------|
  * |      |      |      |      |      |    Enter    |      |   0  |   .  | NOOP | NumL |
  * `-----------------------------------------------------------------------------------'
  */
 [_LOWER] = LAYOUT_planck_grid(
-    KC_GRV,  KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F15, KC_PSLS, KC_KP_7, KC_KP_8, KC_KP_9, KC_PMNS, KC_DEL,
-    KC_DEL,  KC_F5,   KC_F6,   KC_F7,   KC_F8,   KC_F14, KC_PAST, KC_KP_4, KC_KP_5, KC_KP_6, KC_PPLS, KC_BSLS,
-    _______, KC_F9,   KC_F10,  KC_F11,  KC_F12,  KC_F13, KC_F16,  KC_KP_1, KC_KP_2, KC_KP_3, KC_PENT, KC_ENT,
+    KC_GRV,  KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F16, KC_PSLS, KC_KP_7, KC_KP_8, KC_KP_9, KC_PMNS, KC_DEL,
+    KC_DEL,  KC_F5,   KC_F6,   KC_F7,   KC_F8,   KC_F15, KC_PAST, KC_KP_4, KC_KP_5, KC_KP_6, KC_PPLS, KC_BSLS,
+    _______, KC_F9,   KC_F10,  KC_F11,  KC_F12,  KC_F13, KC_F14,  KC_KP_1, KC_KP_2, KC_KP_3, KC_PENT, KC_ENT,
     _______, _______, _______, _______, _______, KC_ENT, KC_ENT,  _______, KC_KP_0, KC_PDOT, XXXXXXX, KC_NLCK
 ),
 
