@@ -111,14 +111,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |------+------+------+------+------+------|------+------+------+------+------+------|
  * |      |  F21 |  F22 |  F23 |  F24 |      |      |      |      |      |      | Mute |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
- * |PLOVER|Mus on|MusOff|MusMod|      |    Pause    |      |PrntSc|VolDwn| VolUp|      |
+ * |PLOVER|Mus on|MusOff|MusMod|      | Pause Media |      |PrntSc|VolDwn| VolUp|      |
  * `-----------------------------------------------------------------------------------'
  */
 [_ADJUST] = LAYOUT_planck_grid(
     RESET,   KC_F13, KC_F14, KC_F15, KC_F16,  _______, _______, _______, QWERTY,  COLEMAK, DVORAK,  _______,
     DEBUG,   KC_F17, KC_F18, KC_F19, KC_F20,  _______, _______, _______, _______, _______, _______, _______,
     _______, KC_F21, KC_F22, KC_F23, KC_F24,  _______, _______, _______, _______, _______, _______, KC_MUTE,
-    PLOVER,  MU_ON,  MU_OFF, MU_MOD, _______, KC_PAUS, KC_PAUS, _______, KC_PSCR, KC_VOLD, KC_VOLU, _______
+    PLOVER,  MU_ON,  MU_OFF, MU_MOD, _______, KC_MPLY, KC_MPLY, _______, KC_PSCR, KC_VOLD, KC_VOLU, _______
 ),
 
 /* Colemak
