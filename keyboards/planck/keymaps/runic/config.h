@@ -43,3 +43,6 @@
 #define GRAVE_ESC_CTRL_OVERRIDE		//Always send Escape if Control is pressed
 #define GRAVE_ESC_ALT_OVERRIDE		//Always send Escape if Alt is pressed
 #define GRAVE_ESC_GUI_OVERRIDE		//Always send Escape if GUI is pressed
+
+#define USB_POLLING_INTERVAL_MS 1
+#define QMK_KEYS_PER_SCAN 12
