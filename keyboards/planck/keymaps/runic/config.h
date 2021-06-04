@@ -1,5 +1,13 @@
 #pragma once
 
+//#define GRAVE_ESC_SHIFT_OVERRIDE	//Always send Escape if Shift is pressed
+#define GRAVE_ESC_CTRL_OVERRIDE		//Always send Escape if Control is pressed
+#define GRAVE_ESC_ALT_OVERRIDE		//Always send Escape if Alt is pressed
+#define GRAVE_ESC_GUI_OVERRIDE		//Always send Escape if GUI is pressed
+
+#define USB_POLLING_INTERVAL_MS 1
+#define QMK_KEYS_PER_SCAN 12
+
 #ifdef AUDIO_ENABLE
     #define STARTUP_SONG SONG(STARTUP_SOUND)
     // #define STARTUP_SONG SONG(NO_SOUND)
@@ -38,11 +46,3 @@
 #define ENCODER_RESOLUTION 4
 
 //#define TAPPING_TOGGLE 3
-
-//#define GRAVE_ESC_SHIFT_OVERRIDE	//Always send Escape if Shift is pressed
-#define GRAVE_ESC_CTRL_OVERRIDE		//Always send Escape if Control is pressed
-#define GRAVE_ESC_ALT_OVERRIDE		//Always send Escape if Alt is pressed
-#define GRAVE_ESC_GUI_OVERRIDE		//Always send Escape if GUI is pressed
-
-#define USB_POLLING_INTERVAL_MS 1
-#define QMK_KEYS_PER_SCAN 12
