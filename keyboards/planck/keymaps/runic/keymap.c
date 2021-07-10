@@ -109,16 +109,16 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |------+------+------+------+------+-------------+------+------+------+------+------|
  * |Debug |  F17 |  F18 |  F19 |  F20 |      |      |      |      |      |      |      |
  * |------+------+------+------+------+------|------+------+------+------+------+------|
- * |      |  F21 |  F22 |  F23 |  F24 |      |      |      |      |      |      | Mute |
+ * |      |  F21 |  F22 |  F23 |  F24 |      |      |      |      |      |      |      |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
- * |PLOVER|Mus on|MusOff|MusMod|      | Pause Media |      |PrntSc|VolDwn| VolUp|      |
+ * |PLOVER|      |      |      |      | Pause Media |      |PrntSc|VolDwn| VolUp| Mute |
  * `-----------------------------------------------------------------------------------'
  */
 [_ADJUST] = LAYOUT_planck_grid(
-    RESET,   KC_F13, KC_F14, KC_F15, KC_F16,  _______, _______, _______, QWERTY,  COLEMAK, DVORAK,  _______,
-    DEBUG,   KC_F17, KC_F18, KC_F19, KC_F20,  _______, _______, _______, _______, _______, _______, _______,
-    _______, KC_F21, KC_F22, KC_F23, KC_F24,  _______, _______, _______, _______, _______, _______, KC_MUTE,
-    PLOVER,  MU_ON,  MU_OFF, MU_MOD, _______, KC_MPLY, KC_MPLY, _______, KC_PSCR, KC_VOLD, KC_VOLU, _______
+    RESET,   KC_F13,  KC_F14,  KC_F15,  KC_F16,  _______, _______, _______, QWERTY,  COLEMAK, DVORAK,  _______,
+    DEBUG,   KC_F17,  KC_F18,  KC_F19,  KC_F20,  _______, _______, _______, _______, _______, _______, _______,
+    _______, KC_F21,  KC_F22,  KC_F23,  KC_F24,  _______, _______, _______, _______, _______, _______, _______,
+    PLOVER,  _______, _______, _______, _______, KC_MPLY, KC_MPLY, _______, KC_PSCR, KC_VOLD, KC_VOLU, KC_MUTE
 ),
 
 /* Colemak
@@ -263,42 +263,6 @@ uint8_t last_muse_note = 0;
 uint16_t muse_counter = 0;
 uint8_t muse_offset = 70;
 uint16_t muse_tempo = 50;
-
-void encoder_update(bool clockwise) {
-  if (muse_mode) {
-    if (IS_LAYER_ON(_RAISE)) {
-      if (clockwise) {
-        muse_offset++;
-      } else {
-        muse_offset--;
-      }
-    } else {
-      if (clockwise) {
-        muse_tempo+=1;
-      } else {
-        muse_tempo-=1;
-      }
-    }
-  } else {
-    if (clockwise) {
-      #ifdef MOUSEKEY_ENABLE
-        register_code(KC_MS_WH_DOWN);
-        unregister_code(KC_MS_WH_DOWN);
-      #else
-        register_code(KC_PGDN);
-        unregister_code(KC_PGDN);
-      #endif
-    } else {
-      #ifdef MOUSEKEY_ENABLE
-        register_code(KC_MS_WH_UP);
-        unregister_code(KC_MS_WH_UP);
-      #else
-        register_code(KC_PGUP);
-        unregister_code(KC_PGUP);
-      #endif
-    }
-  }
-}
 
 void dip_update(uint8_t index, bool active) {
   switch (index) {
